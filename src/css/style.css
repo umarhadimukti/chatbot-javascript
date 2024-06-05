@@ -15,12 +15,13 @@ body {
 nav.navbar {
     width: 40%;
     margin: 0px auto;
+    margin-top: 40px;
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid gray;
     background-color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 .navbar .logo {
     font-size: 1.4rem;
@@ -41,8 +42,84 @@ nav.navbar {
 /* main container chat */
 main.container-chat {
     width: 40%;
+    height: 100vh;
+    max-height: 80vh;
     margin: 0px auto;
-    padding: 30px 20px;
-    border: 2px solid black;
+    padding: 10px 20px;
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+.container-chat .chatbox {
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Inconsolata', sans-serif;
+}
+.chatbox .wrapper-chat {
+    max-height: 500px;
+    overflow-y: auto;
+    width: calc(100% + 20px);
+}
+
+.chatbox .wrapper-chat .chat {
+    display: flex;
+    gap: 5px;
+    align-items: start;
+    margin-bottom: 10px;
+}
+.chat img {
+    position: relative;
+    top: 0px;
+}
+.chat p {
+    letter-spacing: .1px;
+    font-size: .8rem;
+    max-width: 350px;
+    padding: 10px 15px;
+    border-radius: 1px 10px 2px;
+    background-color: rgb(240, 240, 240);
+}
+
+.container-chat .chat-input {
+    width: 570px;
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    gap: 5px;
+    align-items: center;
+}
+.chat-input textarea {
+    font-size: 0.95rem;
+    border-radius: 10px;
+    width: 100%;
+    resize: none;
+    padding: 16px 15px 16px 0;
+    height: 55px;
+    border: none;
+    outline: none;
 }
 /* akhir main container chat */
+
+
+/* responsive breakpoint */
+@media only screen and (max-width: 600px) {
+    nav.navbar {
+        width: 90%;
+    }
+    
+    main.container-chat {
+        width: 90%;
+    }
+
+
+    .container-chat .chat-input {
+        width: 300px;
+        gap: 0px;
+    }
+    .chat-input textarea {
+        width: 100%;
+        padding-left: 10px;
+        border-radius: 0px;
+    }
+}
+/* responsive breakpoint */
