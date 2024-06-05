@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: rgb(245, 245, 245);
+}
+
+/* navbar */
+nav.navbar {
+    width: 40%;
+    margin: 0px auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid gray;
+    background-color: white;
+}
+.navbar .logo {
+    font-size: 1.4rem;
+    font-weight: 500;
+    /* font-family: 'Inconsolata'; */
+}
+.navbar .logo .logo-chat {
+    font-weight: 700;
+    color: #063883;
+}
+.navbar .logo-pesan {
+    color: rgb(1, 77, 163);
+    filter: drop-shadow(0 1px 6px rgba(0, 0, 0, 0.2));
+}
+/* akhir navbar */
+
+
+/* main container chat */
+main.container-chat {
+    width: 40%;
+    margin: 0px auto;
+    padding: 30px 20px;
+    border: 2px solid black;
+}
+/* akhir main container chat */
